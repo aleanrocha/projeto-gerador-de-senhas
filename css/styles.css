@@ -35,6 +35,8 @@ main {
   display: flex;
 }
 
+/* banner */
+
 main #resister-banner {
   background: url('../img/bg-wrapper.jpg') center /cover;
   width: 50%;
@@ -50,4 +52,80 @@ main .banner-layer h1 {
   font-size: 3.5rem;
   color: #fff;
   word-spacing: 50rem;
+}
+
+/* form */
+
+main #register-form {
+  background-color: #fdfdfd;
+  color: #333;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+main #register-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+main #register-form p {
+  color: #555555;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: .9rem;
+}
+main #register-form .form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+main .form-control label {
+  margin-bottom: .6rem;
+  font-weight: bold;
+}
+main .form-control input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: .6rem 0;
+}
+main .form-generate-password {
+  margin-top: 2rem;
+}
+main #generate-password {
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+main #generate-password:hover {
+  color: #4b6cb7;
+}
+main #generated-password {
+  border: 1.5px solid #aaa;
+  border-radius: .5rem;
+  padding: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: none;
+}
+main #generated-password p {
+  font-size: 1rem;
+  color: #20c200;
+  margin-bottom: .5rem;
+}
+main #register-form input[type="submit"] {
+  background-color: #4dee68;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: .3s;
+  margin: 1.5rem auto 0;
+  display: block;
+
+}
+main #register-form input[type="submit"]:hover {
+  background-color: #4fff6c;
 }
