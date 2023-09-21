@@ -11,6 +11,42 @@
   <title>Projeto tela de cadastro com gerador de senhas</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <main>
+    <section id="resister-banner">
+      <div class="banner-layer">
+        <h1>Seja bem vindo!</h1>
+      </div>
+    </section>
+    <section id="resister-form">
+      <h2>Crie sua conta</h2>
+      <p>Registre-se para desfrutar de todas as funcionalidades do sistema</p>
+      <form>
+        <div class="form-control">
+          <label for="iname">Nome:</label>
+          <input type="text" name="name" id="iname" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-control">
+          <label for="iemail">E-mail:</label>
+          <input type="email" name="email" id="iemail" placeholder="Digite seu e-mail">
+        </div>
+        <div class="form-control">
+          <label for="ipass">Senha:</label>
+          <input type="password" name="pass" id="ipass" placeholder="Digite sua senha">
+        </div>
+        <div class="form-generate-password">
+          <p>Quer ajuda para criar sua senha? <span id="generate-password">Clique aqui</span>.</p>
+          <div id="generated-password">
+            <p>Aqui está sua senha</p>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="iconfirm">Confirme sua senha:</label>
+          <input type="password" name="confirm" id="iconfirm" placeholder="Confirme sua senha">
+        </div>
+        <input type="submit" value="Cadastrar">
+      </form>
+    </section>
+  </main>
 </body>
 </html>
