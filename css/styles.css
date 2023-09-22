@@ -26,7 +26,7 @@ input:focus {outline: none;}
 
 main {
   width: 95%;
-  max-width: 900px;
+  max-width: 992px;
   min-height: 80vh;
   margin: 2rem auto;
   box-shadow: -1px 10px 18px -5px rgba(0,0,0,0.66);
@@ -83,7 +83,7 @@ main #register-form .form-control {
   margin-bottom: 1rem;
 }
 main .form-control label {
-  margin-bottom: .6rem;
+  margin-bottom: .3rem;
   font-weight: bold;
 }
 main .form-control input {
@@ -91,8 +91,36 @@ main .form-control input {
   border-bottom: 1px solid #aaa;
   padding: .6rem 0;
 }
+/* segunda versão selecionando as opções de senha */
+main .generate-options {
+  border: 1.5px solid #aaa;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+main #register-form .generate-options .form-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main #register-form .generate-options label {
+  font-size: .8rem;
+} 
+main #register-form .generate-options input[type="text"] {
+  border: none;
+  border: 1.5px solid #aaa;
+  text-align: center;
+  max-width: 45px;
+}
+main .generate-options #generate-pass-option {
+  background-color: #2967d8;
+  color: #fff;
+  padding: .8rem 1rem;
+}
+main .generate-options #generate-pass-option:hover {background-color: #4080f8;}
 main .form-generate-password {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 main #generate-password {
   font-weight: bold;
@@ -116,7 +144,18 @@ main #generated-password p {
   color: #20c200;
   margin-bottom: .5rem;
 }
-main #register-form input[type="submit"] {
+main #password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+main #password ion-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+main #register-form input[type="submit"],
+#generate-pass-option {
   background-color: #4dee68;
   padding: 1rem 2rem;
   border: none;
@@ -128,6 +167,7 @@ main #register-form input[type="submit"] {
   display: block;
 
 }
+.hide {display: none;}
 main #register-form input[type="submit"]:hover {
   background-color: #4fff6c;
 }
