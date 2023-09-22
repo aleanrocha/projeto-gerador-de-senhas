@@ -27,9 +27,30 @@ const getSymbol = () => {
   return symbol[Math.floor(Math.random() * symbol.length)]
 }
 
+const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
+  let password = ""
+  const passwordLenght = 10
+  const generators = [
+    getLetterLowerCase,
+    getLetterUpperCase,
+    getNumber,
+    getSymbol
+  ]
+  for(let c = 0 ; c < passwordLenght ; c += generators.length) {
+    generators.forEach(() => {
+      const generatorValue = generators[Math.floor(Math.random() * generators.length)]()
+      password += generatorValue
+    })
+  }
+  password = password.slice(0, passwordLenght)
+
+  generatePasswordElement.style.display = "block"
+  generatePasswordElement.querySelector("h4").textContent = password
+}
+
 // Eventos
 
 generatePasswordButton.addEventListener("click", () => {
-  console.log(getLetterLowerCase(), getLetterUpperCase(), getNumber(), getSymbol())
+  generatePassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol)
 })
 
