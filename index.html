@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./js/scripts.js" defer></script>
   <title>Projeto tela de cadastro com gerador de senhas</title>
 </head>
@@ -37,7 +39,29 @@
           <p>Quer ajuda para criar sua senha? <span id="generate-password">Clique aqui</span>.</p>
           <div id="generated-password">
             <p>Aqui está sua senha</p>
-            <h4>ndnrnr8745t92</h4>
+            <div id="password">
+              <h4>ndnrnr8745t92</h4>
+              <ion-icon name="copy-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="generate-options">
+          <p>Selecione as opções que você deseja</p>
+          <div class="form-control">
+            <label for="ilength">Quantidade de caracteres:</label>
+            <input type="text" name="length" id="ilength" value="10">
+          </div>
+          <div class="form-control">
+            <label for="iletters">Letras:</label>
+            <input type="checkbox" name="letters" id="letters" checked>
+          </div>
+          <div class="form-control">
+            <label for="inumbers">Números:</label>
+            <input type="checkbox" name="numbers" id="inumbers" checked>
+          </div>
+          <div class="form-control">
+            <label for="isymbols">Símbolos:</label>
+            <input type="checkbox" name="symbols" id="isymbols" checked>
           </div>
         </div>
         <div class="form-control">
