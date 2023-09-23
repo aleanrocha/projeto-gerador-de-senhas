@@ -62,12 +62,23 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
   generatePasswordElement.style.display = "block"
   generatePasswordElement.querySelector("h4").textContent = password
 }
+const copyPassword = () => {
+  const password = generatePasswordElement.querySelector("h4").innerText
+  const spanElement = document.createElement("span")
+  spanElement.textContent = "✅"
+  document.querySelector("#password").appendChild(spanElement)
+  navigator.clipboard.writeText(password).then(() => {
+    setTimeout(() => {
+      spanElement.remove()
+    },500)
+  })
+}
 
 // Eventos
 
 createPassword.addEventListener("click", () => {
   generatePassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol)
 })
-
 generatePasswordButton.addEventListener("click", () => generateOptions.classList.toggle("hide"))
+buttonCopy.addEventListener("click", copyPassword)
 
